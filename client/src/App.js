@@ -25,9 +25,14 @@ class App extends Component{
               <FormComponent />
             )
           }else{
-            return (
-              <UserComponent {...props} />
-            )
+            if(props.match.url === "/api" || props.match.url == "/api/links"){
+              
+            }else{
+              return (
+                <UserComponent {...props} />
+              )
+            }
+            
           }
         }}
         />
