@@ -37,7 +37,7 @@ router.post('/', (req, res) => {
 });
 
 router.get('/:username', (req, res) => {
-    Link.findOne({ username: req.params.username })
+    Link.find({ username: req.params.username })
         .then(link => {
             if(link.length){
                 res.json(link)
