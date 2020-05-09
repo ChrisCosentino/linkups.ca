@@ -39,7 +39,7 @@ export default class Landing extends Component {
             </div>
 
             <div className="content">
-                <h1 ref = {el => this.titleText = el}><MdLink fontSize="60px" color="white" rotate={true} />Uplinks.ca</h1>
+                <h1 ref = {el => this.titleText = el}><MdLink fontSize="60px" color="white" rotate={true} />Linkups.ca</h1>
                 <h3 ref = {el => this.subtitleText = el}>Combine all your links into one</h3>
 
                 <div ref={el => this.startBtn = el}>
