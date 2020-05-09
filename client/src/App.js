@@ -25,7 +25,7 @@ class App extends Component{
               <FormComponent />
             )
           }else{
-            if(props.match.url === "/api" || props.match.url == "/api/links"){
+            if(props.match.url === "/api" || props.match.url === "/api/links"){
               
             }else{
               return (

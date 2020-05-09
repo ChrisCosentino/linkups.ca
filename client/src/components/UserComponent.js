@@ -16,10 +16,13 @@ export default class UserComponent extends Component {
     }
 
     componentDidMount(){
-        axios.get('/api/links'+ this.props.match.params.username)
-            .then(res =>  this.setState({ links: res.data }))
+        axios.get('/api/links/'+ this.props.match.params.username)
+            .then(res => {
+                this.setState({ links: res.data });
+                console.log(this.state.links);
+            })
             .catch(err => {
-                console.log(err.response.status);
+                console.log(err.response);
                 if(err.response.status === 404){
                     this.setState({ notFound: true });
                 }
