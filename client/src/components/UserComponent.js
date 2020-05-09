@@ -16,7 +16,7 @@ export default class UserComponent extends Component {
     }
 
     componentDidMount(){
-        axios.get('http://localhost:5000/api/links/'+ this.props.match.params.username)
+        axios.get('/api/links'+ this.props.match.params.username)
             .then(res =>  this.setState({ links: res.data }))
             .catch(err => {
                 console.log(err.response.status);

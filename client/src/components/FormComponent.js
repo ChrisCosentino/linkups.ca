@@ -67,7 +67,7 @@ export default class FormComponent extends Component {
 
         console.log(data);
        
-        axios.post('http://localhost:5000/api/links', data)
+        axios.post('api/links', data)
             .then((res) => {
                 console.log(res);
                 
